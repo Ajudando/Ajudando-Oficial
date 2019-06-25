@@ -9,12 +9,15 @@ $usersocialname = filter_input(INPUT_POST, 'userfistname', FILTER_SANITIZE_STRIN
 $senha = '0000';
 
 //salvano as informações na base de dados
-$verificador = $us->cadastrar($user, $senha, $usersocialname, $email, '11912345678', 'nao', 'nao', 'google');
+$verificador = $us->cadastro($user, $senha, $usersocialname, $email, '99999999999', 'nao', 'nao', 'google');
 if($verificador !== false){
 	$_SESSION['carregar'] = true;
 	$_SESSION['Guser'] = $email;
 	$_SESSION['Gsenha']= $senha;
-	echo "areaprivada.php";
+	$verificado = $us->logarGoogle($email, $senha);
+	if($verificado == true){
+		echo "areaprivada.php";
+	}
 }
 else{
 	$_SESSION['carregar'] = true;

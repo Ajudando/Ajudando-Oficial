@@ -24,15 +24,33 @@ class Usuario
 		{
 		    // caso nao, cadastrar
 			$senha_codificada = md5($senha);
-			$_SESSION['sen'] = $senha_codificada;
-			if(isset($titulacao)){
-				$comand_sql1 = "INSERT INTO clientes (nome, senha, nome_social, email, contato_email, celular, contato_celular, social, titulacao_id_titulacao) 
+			$comand_sql1 = "INSERT INTO clientes (nome, senha, nome_social, email, contato_email, celular, contato_celular, social, titulacao_id_titulacao) 
 			VALUES ('$nome', '$senha_codificada', '$nome_social', '$email', '$contato_email', '$celular', '$contato_celular', '$social', '$titulacao')";
-			}
-			else{
-				$comand_sql1 = "INSERT INTO clientes (nome, senha, nome_social, email, contato_email, celular, contato_celular, social) 
+		
+
+			$comand_sql1 = "INSERT INTO clientes (nome, senha, nome_social, email, contato_email, celular, contato_celular, social) 
 			VALUES ('$nome', '$senha_codificada', '$nome_social', '$email', '$contato_email', '$celular', '$contato_celular', '$social')";
-			}
+			mysqli_query($connect, $comand_sql1);
+			mysqli_close($connect);
+			return true;
+		}	
+	}
+	
+	public function cadastro($nome, $senha, $nome_social, $email, $celular, $contato_email, $contato_celular, $social )
+	{
+		//verificar se já existe cadastro
+		$connect = mysqli_connect("remotemysql.com:3306", "TBt55e2fqG", "AndFOXlW4k", "TBt55e2fqG");
+		$comand_sql = mysqli_query($connect ,"SELECT * FROM clientes WHERE email = '{$email}'");
+		if(mysqli_num_rows($comand_sql) == true)
+		{
+			return false; //já tem cadastro
+		}
+		else
+		{
+		    // caso nao, cadastrar
+			$senha_codificada = md5($senha);
+			$comand_sql1 = "INSERT INTO clientes (nome, senha, nome_social, email, contato_email, celular, contato_celular, social) 
+			VALUES ('$nome', '$senha_codificada', '$nome_social', '$email', '$contato_email', '$celular', '$contato_celular', '$social')";
 			mysqli_query($connect, $comand_sql1);
 			mysqli_close($connect);
 			return true;

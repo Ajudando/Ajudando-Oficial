@@ -62,7 +62,7 @@ if (!isset($accessToken)) {
 			$face_first_name = $user->getName();
 		}
 		$face_senha = '0000';
-		$face_ver = $us->cadastrar($face_name, $face_senha, $face_first_name, $face_email, "99999999999", "nao", "nao", "facebook");
+		$face_ver = $us->cadastro($face_name, $face_senha, $face_first_name, $face_email, "99999999999", "nao", "nao", "facebook");
 		if ($face_ver == true) {
 			header("location: areaprivada.php");
 		} else {
