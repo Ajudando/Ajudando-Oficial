@@ -8,8 +8,10 @@
 <body>
 	<div class="fundo-completar">
 		<form method="POST" class="form-completar">
-			<div>
-				<p>Como você se considera e relação a informática de um modo geral?</p>
+			<img src="images/ajudandotitle.png" alt="" class="sub-image">
+			<span class="sub-title">Para você assinar a versão premium é necessário completar o seu cadastro. Responda as perguntas de acordo com seu nível de conhecimento sobre o assunto.</span>
+			<div class="question">
+				<p>Como você se considera em relação a informática de um modo geral ?</p>
 				<select name="informatica">
 					<?php
 					require_once "usuarios.php";
@@ -26,7 +28,7 @@
 					?>
 				</select>
 			</div>
-			<div>
+			<div class="question">
 				<p>Como você se considera em relação ao uso de editores de texto (word,...)</p>
 				<select name="editores_texto">
 					<?php
@@ -42,8 +44,8 @@
 					?>
 				</select>
 			</div>
-			<div>
-				<p>Como você se considera em relação a editores de apresentação (Power Point)</p>
+			<div class="question">
+				<p>Como você se considera em relação aos editores de apresentação (Power Point)</p>
 				<select name="apresentacao">
 					<?php
 					//exibindo os valores da tabela do bd
@@ -58,7 +60,7 @@
 					?>
 				</select>
 			</div>
-			<div>
+			<div class="question">
 				<p>Ao falarmos de edição de imagens e vídeos. Como você se considera?</p>
 				<select name="imagem_video">
 					<?php
@@ -74,8 +76,8 @@
 					?>
 				</select>
 			</div>
-			<div>
-				<p>Quando tem alguma dificuldade no uso de recursos multimídia o que costuma fazer?</p>
+			<div class="question">
+				<p>Quando tem alguma dificuldade no uso de recursos de multimídia, o que costuma fazer?</p>
 				<select name="multimidia">
 					<?php
 					//exibindo os valores da tabela do bd
@@ -90,8 +92,8 @@
 					?>
 				</select>
 			</div>
-			<div>
-				<p>Quando precisa de atividades acadêmicas e/ou ...., como costuma a consegui-las?</p>
+			<div class="question">
+				<p>Quando precisa de atividades acadêmicas, como costuma a consegui-las?</p>
 				<select name="atividades_academicas">
 					<?php
 					//exibindo os valores da tabela do bd
@@ -106,8 +108,8 @@
 					?>
 				</select>
 			</div>
-			<div>
-				<p>Como costuma a buscar imagens para elaborar suas atividades acadêmicas?</p>
+			<div class="question">
+				<p>Como costuma buscar imagens para elaborar suas atividades acadêmicas?</p>
 				<select name="atividades_imagem">
 					<?php
 					//exibindo os valores da tabela do bd
@@ -122,13 +124,13 @@
 					?>
 				</select>
 			</div>
-			<div>
+			<div class="question">
 				<p>E costuma manter os créditos aos autores das atividades acadêmicas?</p>
 				<span><input type="radio" value="sim" name="credito_autor"> Sim ou
 					<input type="radio" value="nao" name="credito_autor"> Não</span>
 			</div>
-			<div>
-				<p>O AJUDANDO disponibiliza uma série de atividades elaborados por professores e estudantes de educação. O que acha disto?</p>
+			<div class="question">
+				<p>O AJUDANDO disponibiliza uma série de atividades elaboradas por professores e estudantes de educação. O que acha disto?</p>
 				<select name="disponibiliza_atividades">
 					<?php
 					//exibindo os valores da tabela do bd
@@ -143,8 +145,8 @@
 					?>
 				</select>
 			</div>
-			<div>
-				<p>Ao solicitar atividades acadêmicas o AJUDANDO irá envia-las para você por e-mail. Estas atividades podem ser enviadas em 3 formatos. Qual prefere?</p>
+			<div class="question">
+				<p>Ao solicitar atividades acadêmicas, o AJUDANDO irá envia-las para você por e-mail. Estas atividades podem ser enviadas em 3 formatos. Qual prefere?</p>
 				<span>
 					<?php
 					//exibindo os valores da tabela do bd
@@ -158,8 +160,8 @@
 					}
 					?>
 				</span>
-			</div>
-			</br><input type="submit" value="salvar">
+			</div class="question">
+			<input type="submit" value="Salvar" class="btn-complementar">
 		</form>
 	</div>
 	<?php

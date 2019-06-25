@@ -17,4 +17,58 @@ body {
     border: 1px solid white;
     border-radius: 20px;
     width: 1260px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.question {
+    padding-left: 50px;
+}
+
+select {
+    width: 30%;
+    outline: none;
+    background-color: white;
+    border: 3px solid #524f4f;
+    border-radius: 4px;
+    height: 27px;
+}
+
+p {
+    margin: 0;
+    margin-top: 18px;
+    margin-bottom: 5px;
+}
+
+.btn-complementar {
+    border: 3px solid #C50000;
+    background-color: #c50000;
+    border-radius: 3px;
+    height: 35px;
+    width: 90px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    outline: none;
+    margin-top: 14px;
+    align-self: center;
+    margin-bottom: 12px;
+}
+
+.sub-image {
+    position: absolute;
+    width: 400px;
+    left: 760px;
+    top: 120px;
+}
+
+.sub-title {
+    position: absolute;
+    width: 390px;
+    left: 760px;
+    top: 280px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: justify;
 }
