@@ -1,0 +1,20 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.fundo-completar {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/lousa.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-completar {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 1260px;
+}

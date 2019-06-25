@@ -22,9 +22,12 @@
 			<nav class="nav-user">
 				<ul class="ul-user">
 					<li><a href="conta.php">Minha conta</a></li>
-					<li><a href="perfil_sair.php" >Sair</a></li>
+					<li><a href="perfil_sair.php">Sair</a></li>
 				</ul>
 			</nav>
+			<div class="assine">
+				<input type="button" class="btn-assine" value="Assine Já" name="assine">
+			</div>
 			<div class="input-search">
 				<input type="text" placeholder="Pesquise uma imagem por termo" name="user" class="search">
 				<img src="images/search.png" alt="" class="search-image" />
@@ -37,7 +40,7 @@
 		</label>
 		<nav class="nav-menu">
 			<ul class="ul-menu">
-				<li><a href="atividade.php">Atividades</a></li>
+				<li><a href="areaprivada.php">Atividades</a></li>
 				<li><a href="aula.php">Video-Aulas</a></li>
 				<li><a href="plano.php">Planos</a></li>
 				<li><a href="configurar.php">Configurações</a></li>
@@ -47,15 +50,12 @@
 			<div class="modal-images">
 				<span>Não há imagens para a visualização.</span>
 				<img src="images/sad.png" alt="" class="no-images" />
-<?php
-session_start();
-if(isset($_SESSION['login'])) {
-	
-}
-else {
-    header("location: index.php");
-}
-?>
+				<?php
+				session_start();
+				if (isset($_SESSION['login'])) { } else {
+					header("location: index.php");
+				}
+				?>
 			</div>
 
 		</div>
