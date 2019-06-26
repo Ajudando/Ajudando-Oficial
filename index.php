@@ -33,10 +33,10 @@ try {
 	exit;
 }
 if (!isset($accessToken)) {
-	$url_login = 'https://ajudando.herokuapp.com';
+	$url_login = 'https://ajudando.herokuapp.com/index.php';
 	$loginUrl = $helper->getLoginUrl($url_login, $permissions);
 } else {
-	$url_login = 'https://ajudando.herokuapp.com';
+	$url_login = 'https://ajudando.herokuapp.com/index.php';
 	$loginUrl = $helper->getLoginUrl($url_login, $permissions);
 	//Usuario já cadastrado 
 	if (isset($_SESSION['face_access_token'])) {
